@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita rolagem */
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(4, 4, 4, 0.588);
+}
+
+header img {
+  margin-left: 5%;
+  width: 20%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.world {
+  background-image: url(imgs/fundo.png);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-x;
+  animation: moveBackground 90s linear infinite;
+  background-size: 200% 100%;
+  image-rendering: pixelated;
+}
+
+.score-container {
+  position: absolute;
+  top: 1vmin;
+  right: 1vmin;
+  text-align: right;
+}
+
+.score, .high-score {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: x-large;
+  padding: 10px;
+  margin-top: 10px;
+  border: 5px #2D0B56;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.386);
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0;
+  }
+  to { 
+    background-position: -200% 0;
+  }
+}
+
+.start-screen {
+  color: #2D0B56;
+  border: 10px   #f5f5f5;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+  font-size: 3vmin;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: blink 1s infinite alternate; /* Adiciona a animação de piscar */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+.dino {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  height: 30%;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 25%;
+  bottom: 0;
+}
