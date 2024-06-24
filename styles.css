@@ -105,11 +105,29 @@ body {
 }
 
 .dino {
-  --bottom: 0;
+  --bottom: 0; /* Propriedade CSS customizada para controle da posição inferior */
+  position: absolute; /* Posicionamento absoluto dentro do contêiner .world */
+  left: 1%; /* Posiciona 1% da borda esquerda */
+  height: 30%; /* Define a altura do dinossauro como 30% da altura do contêiner */
+  bottom: calc(var(--bottom) * 1%); /* Usa a propriedade customizada para ajustar a posição inferior */
+  /* position: absolute;
+  bottom: 50px;
+  left: 100px; */
+}
+
+.dino-img {
+  width: 140px;
+  height: auto;
+}
+
+.collision-box {
   position: absolute;
-  left: 1%;
-  height: 30%;
-  bottom: calc(var(--bottom) * 1%);
+  width: 75px;  /* ajuste conforme necessário */
+  height: 50px;  /* ajuste conforme necessário */
+  bottom: 0;  /* posicione conforme necessário */
+  left: 0;  /* ajuste conforme necessário */
+  margin-left: 30px;
+  /* background-color: red; */
 }
 
 .cactus {
