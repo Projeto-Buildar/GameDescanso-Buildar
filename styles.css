@@ -116,17 +116,18 @@ body {
 }
 
 .dino-img {
-  width: 140px;
+  width: 100px;
   height: auto;
 }
 
 .collision-box {
   position: absolute;
-  width: 75px;  /* ajuste conforme necessário */
+  width: 60px;  /* ajuste conforme necessário */
   height: 50px;  /* ajuste conforme necessário */
   bottom: 0;  /* posicione conforme necessário */
   left: 0;  /* ajuste conforme necessário */
-  margin-left: 30px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   /* background-color: red; */
 }
 
